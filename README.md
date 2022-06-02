@@ -1,4 +1,4 @@
-#ImagineFocalResizer
+# ImagineFocalResizer
 
 A tool for [Imagine Image manipulation library](http://imagine.readthedocs.org/) for PHP to resize its image instances using a central "focal point". The image will always be cropped so that the focal point remains within the resized image. This allows to create versions for different screen sizes while maintaining a "responsive crop".
 
@@ -8,7 +8,7 @@ The focal point defined by x and y coordinates ranging from the left top corner 
 
 The idea comes from Jono Menz's jQuery FocusPoint plugin. Its [documentation](https://github.com/jonom/jquery-focuspoint) illustrates how the approach works.
 
-##Installation##
+## Installation
 
 Use [Composer](https://getcomposer.org/) to install.
 
@@ -16,9 +16,9 @@ Use [Composer](https://getcomposer.org/) to install.
 $ composer require maagi/imagine-focalresizer
 ```
 
-##Usage##
+## Usage
 
-```
+```php
 use Imagine\Gd\Imagine; // or Imagick/Gmagick
 use Imagine\Image\ImageInterface;
 use Imagine\Image\Box;
@@ -45,10 +45,10 @@ $resizer->resize(
 $image->save('dragonfly-resized.jpg');
 ```
 
-##How it works##
+## How it works
 
 The cropping strategy used here is very simple. It just compares the width and height ratios of the original and target sizes. The focal point will be on the center of the crop on the axis on which the ratio is greater while the other axis will remain uncropped. If a part of the crop area goes beyond the image's edge it will be moved accordingly.
 
-##Contribution##
+## Contribution
 
 I know there are other cropping strategies and some fit certain scenarios better than the others. Please suggest other (better) ways to do this. The logic could then be extracted to several strategy classes and let the user decide which one to use.
