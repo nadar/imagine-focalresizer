@@ -38,7 +38,7 @@ class Resizer
 
         $image
             ->crop(new Point($cropX1, $cropY1), new Box($cropX2 - $cropX1, $cropY2 - $cropY1))
-            ->resize(new Box($width, $height, $filter))
+            ->resize(new Box($width, $height), $filter)
         ;
 
         return $image;
