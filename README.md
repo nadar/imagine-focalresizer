@@ -1,4 +1,8 @@
+> This is a fork of awesome [maagi/imagine-focalresizer](https://github.com/maagi/imagine-focalresizer). I have updated the imagine library and fixed a small bug. Here you can see the [diff compared to the original repo](https://github.com/maagi/imagine-focalresizer/compare/master...nadar:imagine-focalresizer:master).
+
 # ImagineFocalResizer
+
+
 
 A tool for [Imagine Image manipulation library](http://imagine.readthedocs.org/) for PHP to resize its image instances using a central "focal point". The image will always be cropped so that the focal point remains within the resized image. This allows to create versions for different screen sizes while maintaining a "responsive crop".
 
